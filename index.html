@@ -18,7 +18,7 @@
       <div class="container">
         <a href="#"><img src="./images/logo.svg" alt="Manage logo"></a>
         <nav class="primary-navigation">
-          <ul role="list" class="nav-list">
+          <ul role="list" aria-label="Primary" class="nav-list">
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Product</a></li>
             <li><a href="#">About Us</a></li>
@@ -126,9 +126,46 @@
       </section>
     </main>
 
-    
+    <footer class="bg-very-dark-blue text-white">
+      <div class="container">
+        <div class="even-columns">
 
+          <div>
+            <a href="#"><img src="./images/logo.svg" alt="Manage logo"></a>
+            <ul role="list" aria-label="social links">
+              <li><a aria-label="facebook" href="#"><img src="./images/icon-facebook.svg"></a></li>
+              <li><a aria-label="youtube" href="#"><img src="./images/icon-youtube.svg"></a></li>
+              <li><a aria-label="twitter" href="#"><img src="./images/icon-twitter.svg"></a></li>
+              <li><a aria-label="pinterest" href="#"><img src="./images/icon-pinterest.svg"></a></li>
+              <li><a aria-label="instagram" href="#"><img src="./images/icon-instagram.svg"></a></li>
+            </ul>
+          </div>
 
+          <div>
+            <nav class="footer-nav">
+              <ul aria-label="Footer" role="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div>
+            <form action="">
+              <input type="email" placeholder="Updates in your inbox…">
+              <button class="button">Go</button>
+            </form>
+            <p>Copyright 2020. All Rights Reserved</p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
 
 
     <script type="module" src="/main.js"></script>

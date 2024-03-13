@@ -144,6 +144,10 @@ svg {
   color: var(--Dark-Blue);
 }
 
+.bg-very-dark-blue{
+  background-color: var(--Very-Dark-Blue);
+}
+
 .bg-red{
   background-color: var(--Bright-Red);
 }
