@@ -1,0 +1,18 @@
+{
+	"homepage": "https://dorkatzir.github.io/manage-landing-page",
+	"name": "manage-landing-page",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build --base=./",
+		"preview": "vite preview",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
+	},
+	"devDependencies": {
+		"gh-pages": "^6.1.1",
+		"vite": "^5.1.6"
+	}
+}
