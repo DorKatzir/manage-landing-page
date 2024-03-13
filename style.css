@@ -121,6 +121,119 @@ svg {
   }
 }
 
+
+/*  General styling */
+
+body{
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--Dark-Blue);
+}
+
+/* Button */
+.button{
+  display: inline-flex;
+  border: 0;
+  border-radius: 100vmax;
+  line-height: 1;
+  padding: 1.25em 2.5em;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  color: var(--Very-Light-Gray);
+  background-color: var(--Bright-Red);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 1.125em 1em -1em var(--Bright-Dark-Red);
+}
+
+.button[data-type="inverted"]{
+  background-color: var(--Very-Light-Gray);
+  color: var(--Bright-Red);
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--Bright-Light-Red);
+}
+.button[data-type="inverted"]:hover, 
+.button[data-type="inverted"]:focus-visible {
+  background-color: var(--Very-Light-Gray);
+  color: var(--Bright-Dark-Red);
+}
+
+/* Navigation */
+.primary-header{
+  padding-top: var(--size-700);
+}
+.nav-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav-list {
+  font-size: var(--fs-nav);
+}
+
+@media (max-width: 50em) {
+  .primary-navigation{
+    display: none;
+
+    position: absolute;
+    padding: var(--size-700);
+    inset: 7rem var(--size-400) auto;
+    background-color: var(--Very-Light-Gray);
+    border-radius: var(--size-100);
+    box-shadow: 0 0 .75em rgb(0 0 0 / 0.1);
+  }
+
+  .primary-header[data-overlay]::before { 
+    content: '';
+    position: fixed;
+    /* z-index: -1; */
+    inset: 0;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / .8));
+  }
+
+  .nav-list {
+    display: grid;
+    gap: var(--size-600);
+    text-align: center;
+    font-weight: var(--fw-bold);
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: var(--Dark-Blue);
+  }
+  .nav-list a:hover,
+  .nav-list a:focus {
+    color: var(--Bright-Red);
+  }
+
+  .primary-navigation[data-visible]{
+    display: block;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    /* top: var(--size-500); */
+    right: var(--size-400);
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding:.5em;
+  }
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
+}
+
 /* Utilities classes */
 .visually-hidden{
   position: absolute;
@@ -143,7 +256,6 @@ svg {
 .fw-regular{
   font-weight: var(--fw-regular);
 }
-
 
 .fs-primary-heading{
   font-size: var(--fs-primary-heading);
@@ -190,6 +302,15 @@ svg {
   padding-block: var(--size-700);
 }
 
+.display-sm-none{
+  display: none;
+}
+
+@media (min-width: 50em) {
+  .display-md-inline-flex{
+    display: inline-flex;
+  }
+}
 
 .container{
   --max-width: 1110px;
@@ -208,79 +329,6 @@ svg {
   .even-columns{
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-  }
-}
-
-/*  General styling */
-
-body{
-  font-size: var(--fs-body);
-  font-family: var(--ff-body);
-  color: var(--Dark-Blue);
-}
-
-/* Button */
-.button{
-  border: 0;
-  border-radius: 100vmax;
-  line-height: 1;
-  padding: 1.25em 2.5em;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-button);
-  color: var(--Very-Light-Gray);
-  background-color: var(--Bright-Red);
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 1.125em 1em -1em var(--Bright-Dark-Red);
-}
-
-.button[data-type="inverted"]{
-  background-color: var(--Very-Light-Gray);
-  color: var(--Bright-Red);
-}
-
-.button:hover,
-.button:focus-visible {
-  background-color: var(--Bright-Light-Red);
-}
-.button[data-type="inverted"]:hover, 
-.button[data-type="inverted"]:focus-visible {
-  background-color: var(--Very-Light-Gray);
-  color: var(--Bright-Dark-Red);
-}
-
-/* Navigation */
-.primary-header{
-  margin-top: var(--size-700);
-}
-.nav-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-.mobile-nav-toggle {
-  display: none;
-}
-
-@media (max-width: 50em) {
-  .primary-navigation{
-    display: none;
-  }
-  .primary-navigation[data-visible]{
-    display: block;
-    position: fixed;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    padding:.5em;
-  }
-  .mobile-nav-toggle .icon-close {
-    display: none;
   }
 }
 
