@@ -177,6 +177,17 @@ body{
 
 .nav-list {
   font-size: var(--fs-nav);
+  font-weight: var(--fw-semi-bold);
+  display: flex;
+  gap: clamp(var(--size-400), 5vw, var(--size-700));
+}
+.nav-list a {
+  text-decoration: none;
+  color: var(--Dark-Blue);
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--Bright-Red);
 }
 
 @media (max-width: 50em) {
@@ -186,6 +197,8 @@ body{
     position: absolute;
     padding: var(--size-700);
     inset: 7rem var(--size-400) auto;
+    max-width: 25em;
+    margin-inline: auto;
     background-color: var(--Very-Light-Gray);
     border-radius: var(--size-100);
     box-shadow: 0 0 .75em rgb(0 0 0 / 0.1);
@@ -205,15 +218,6 @@ body{
     gap: var(--size-600);
     text-align: center;
     font-weight: var(--fw-bold);
-  }
-
-  .nav-list a {
-    text-decoration: none;
-    color: var(--Dark-Blue);
-  }
-  .nav-list a:hover,
-  .nav-list a:focus {
-    color: var(--Bright-Red);
   }
 
   .primary-navigation[data-visible]{
