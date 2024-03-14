@@ -130,6 +130,17 @@ body{
   color: var(--Dark-Blue);
 }
 
+p:not([class]){
+  color: var(--Dark-Grayish-Blue);
+  max-width: 32ch;
+  text-align: justify;
+  hyphens:auto;
+}
+
+p[data-width="wide"]{
+  max-width: 42ch;
+}
+
 /* Button */
 .button{
   display: inline-flex;
@@ -252,6 +263,31 @@ body{
   border: 0;
 }
 
+.container{
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding)*2));
+  margin-inline: auto;
+}
+
+:where(.flow :not(:first-child)){
+  margin-top: var(--flow-spacer, 3em);
+}
+
+
+.even-columns{
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns{
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
 .fw-bold{
   font-weight: var(--fw-bold);
 }
@@ -317,23 +353,4 @@ body{
   }
 }
 
-.container{
-  --max-width: 1110px;
-  --padding: 1rem;
-
-  width: min(var(--max-width), 100% - (var(--padding)*2));
-  margin-inline: auto;
-}
-
-.even-columns{
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 50em) {
-  .even-columns{
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-}
 
