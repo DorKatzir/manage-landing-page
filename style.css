@@ -441,6 +441,15 @@ input:where([type='text'], [type='email']) {
   border-radius: 100vw;
 }
 
+/*  Slider */
+.slider {
+  display: flex;
+}
+
+.slider > * {
+  width: 100%;
+  flex: 0 0 auto;
+}
 
 /* Utilities classes */
 .visually-hidden{
