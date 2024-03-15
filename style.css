@@ -382,6 +382,66 @@ input:where([type='text'], [type='email']) {
   opacity: .1;
 }
 
+/* Numbered Items */
+
+.numbered-items {
+  counter-reset: count;
+  width: fit-content;
+  margin-inline: auto;
+}
+.numbered-items li {
+  counter-increment: count;
+}
+.numbered-items div {
+  display:grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: var(--size-400);
+  position: relative; 
+}
+
+.numbered-items__title{
+  line-height: 1;
+}
+
+.numbered-items__body{
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 30em) {
+  .numbered-items__body{
+   grid-column: 2 / -1;
+  } 
+}
+@media (max-width: 30em) {
+  .numbered-items__title::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    /* grid-column: 1 / -1; */
+    grid-row: 1 / 2;
+    inset: 0;
+    border-top-left-radius: 100vw;
+    border-bottom-left-radius: 100vw;
+    box-shadow: 5em 0 0 var(--Very-Pale-Red);
+    background-color: var(--Very-Pale-Red);
+    
+  }
+}
+
+.numbered-items div::before {
+  content:  '0' counter(count);
+  display: flex;
+  align-items: center;
+  background-color: var(--Bright-Red);
+  color: var(--Very-Light-Gray);
+  font-weight: var(--fw-bold);
+  padding: 0 var(--size-500);
+  height: 40px;
+  border-radius: 100vw;
+}
+
+
 /* Utilities classes */
 .visually-hidden{
   position: absolute;
@@ -415,6 +475,8 @@ input:where([type='text'], [type='email']) {
   }
 }
 
+
+
 .vertical-align-center{
   align-items: center;
 }
@@ -429,10 +491,24 @@ input:where([type='text'], [type='email']) {
   }
 }
 
-
-
 :where(.flow :not(:first-child)){
   margin-top: var(--flow-spacer, 3em);
+}
+
+.text-center{
+  text-align: center;
+}
+.text-center p{
+  margin-inline: auto;
+}
+
+@media(max-width: 50em){
+  .text-center-sm-only{
+    text-align: center;
+  }
+  .text-center-sm-only p{
+    margin-inline: auto;
+  }
 }
 
 .fw-bold{
@@ -488,6 +564,9 @@ input:where([type='text'], [type='email']) {
 }
 .padding-block-700{
   padding-block: var(--size-700);
+}
+.margin-bottom-700 {
+  margin-block-end: var(--size-700);
 }
 
 .display-sm-none{
