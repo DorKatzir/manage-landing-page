@@ -83,7 +83,8 @@ html:focus-within {
 
 html,
 body{
-  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -537,7 +538,7 @@ input:where([type='text'], [type='email']) {
     background-color: var(--Bright-Red);
 }
 
-/* Image with blob bg */
+/* hero */
 
 @media (max-width: 47em) {
   .hero__image{
@@ -555,12 +556,37 @@ input:where([type='text'], [type='email']) {
   max-height:70vh;
   max-height:70dvh;
   aspect-ratio: 1 / 1.2;
-  background-position: bottom left;
   background-repeat: no-repeat;
+  background-position: bottom left;
 }
 @media (min-width: 47em) {
   .hero__image::before{
     width: 45%;
+  }
+}
+
+/* sales points */
+.sales-points__blog{
+  position: relative;
+}
+.sales-points__blog::before{
+  content: url('./images/bg-tablet-pattern.svg');
+  zoom: 40%;
+  position: absolute;
+  z-index: -1;
+  left: 70%;
+  bottom: 140%;
+  width: 100px;
+}
+
+@media (min-width: 47em) {
+  .sales-points__blog::before{
+    zoom: 90%;
+    position: absolute;
+    z-index: -1;
+    left: -500px;
+    top:50%;
+    width: 100px;
   }
 }
 
