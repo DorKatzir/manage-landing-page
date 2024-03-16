@@ -15,11 +15,11 @@ navToggle.addEventListener('click', ()=>{
 		arrows: false,
 		adaptiveHeight: false,
 		dots: true,
-		centerMode: true,
+		
 		responsive: {
 			480: {
 				dots: false,
-				arrows: true,
+				arrows: false,
 			},
 		},
  })

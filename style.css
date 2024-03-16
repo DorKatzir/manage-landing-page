@@ -447,10 +447,12 @@ input:where([type='text'], [type='email']) {
   display: flex;
   list-style: none;
   gap: var(--size-600);
+  /* scroll-padding-inline: var(--size-200); */
 }
 
 .a11y-slider-container{
-  margin-block: var(--size-700)
+  margin-block: var(--size-700);
+  margin-inline: var(--size-400);
 }
 
 .slider > * {
@@ -462,10 +464,13 @@ input:where([type='text'], [type='email']) {
   .slider > * {
     width: 50%;
   }
+  .a11y-slider-container{
+    margin-inline: 0;
+  }
 }
 @media (min-width: 50em) {
   .slider > * {
-    width: 33%;
+    width: 35%;
   }
 }
 
@@ -493,7 +498,7 @@ input:where([type='text'], [type='email']) {
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: var(--size-300);
+    gap: var(--size-400);
     padding: 0;
     margin-block: var(--size-500);
 }
@@ -516,9 +521,13 @@ input:where([type='text'], [type='email']) {
     border-radius: 100%;
 }
 
-.a11y-slider-dots li button.active, .a11y-slider-dots li button:focus, .a11y-slider-dots li button:hover {
-    background: var(--Bright-Red);
+.a11y-slider-dots li button.active, 
+.a11y-slider-dots li button:focus, 
+.a11y-slider-dots li button:hover {
+    background-color: var(--Bright-Red);
 }
+
+
 
 /* Utilities classes */
 .visually-hidden{
