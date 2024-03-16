@@ -43,7 +43,7 @@
   --size-900: 5rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   :root{
 
     --fs-body: var(--fs-500);
@@ -205,7 +205,7 @@ p[data-width="wide"]{
   color: var(--Bright-Red);
 }
 
-@media (max-width: 50em) {
+@media (max-width: 47em) {
   .primary-navigation{
     display: none;
 
@@ -300,7 +300,7 @@ input:where([type='text'], [type='email']) {
   padding: var(--size-300) var(--size-400);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .primary-footer-wrapper {
     /* display: grid;
     gap: var(--size-700); */
@@ -315,7 +315,7 @@ input:where([type='text'], [type='email']) {
   }
 }
 
-@media(max-width: 50em) {
+@media(max-width: 47em) {
   .primary-footer-wrapper > * {
     margin-inline: auto;
   }
@@ -348,7 +348,7 @@ input:where([type='text'], [type='email']) {
 .social-list a:is(:hover, :focus) .social-icon {
   fill: var(--Bright-Red);
 }
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .social-list {
     display: flex;
     gap: var(--size-300);
@@ -364,7 +364,7 @@ input:where([type='text'], [type='email']) {
   isolation: isolate;
   text-align: center;
 }
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .cta {
     text-align: left;
   }
@@ -468,7 +468,7 @@ input:where([type='text'], [type='email']) {
     margin-inline: 0;
   }
 }
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .slider > * {
     width: 35%;
   }
@@ -527,7 +527,32 @@ input:where([type='text'], [type='email']) {
     background-color: var(--Bright-Red);
 }
 
+/* Image with blob bg */
 
+@media (max-width: 47em) {
+  .hero__image{
+    order: -1;
+  }
+}
+.hero__image::before{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-image: url('./images/bg-tablet-pattern.svg');
+  right: 0;
+  top: 0;
+  width: 87%;
+  max-height:70vh;
+  max-height:70dvh;
+  aspect-ratio: 1 / 1.2;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+@media (min-width: 47em) {
+  .hero__image::before{
+    width: 45%;
+  }
+}
 
 /* Utilities classes */
 .visually-hidden{
@@ -555,7 +580,7 @@ input:where([type='text'], [type='email']) {
   gap: 1rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .even-columns{
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -572,7 +597,7 @@ input:where([type='text'], [type='email']) {
   justify-self: end;
 }
 
-@media(min-width: 50em){
+@media(min-width: 47em){
   .justify-self-end-md{
     justify-self: end;
   }
@@ -589,7 +614,7 @@ input:where([type='text'], [type='email']) {
   margin-inline: auto;
 }
 
-@media(max-width: 50em){
+@media(max-width: 47em){
   .text-center-sm-only{
     text-align: center;
   }
@@ -656,11 +681,15 @@ input:where([type='text'], [type='email']) {
   margin-block-end: var(--size-700);
 }
 
+.mx-auto {
+  margin-inline: auto;
+}
+
 .display-sm-none{
   display: none;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 47em) {
   .display-md-inline-flex{
     display: inline-flex;
   }
