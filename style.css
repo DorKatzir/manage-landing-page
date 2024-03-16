@@ -442,6 +442,7 @@ input:where([type='text'], [type='email']) {
 }
 
 /*  Slider */
+
 .slider {
   display: flex;
   list-style: none;
@@ -456,7 +457,6 @@ input:where([type='text'], [type='email']) {
   width: 100%;
   flex: 0 0 auto;
 }
-
 
 @media (min-width: 30em) {
   .slider > * {
@@ -486,6 +486,38 @@ input:where([type='text'], [type='email']) {
   margin-inline: auto;
   top: calc(var(--size-800)/2);
 
+}
+
+.a11y-slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: var(--size-300);
+    padding: 0;
+    margin-block: var(--size-500);
+}
+
+.a11y-slider-dots li {
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    color: #fff;
+}
+.a11y-slider-dots li button {
+    display: block;
+    font-size: 0;
+    text-indent: -9999px;
+    border: 1px solid var(--Bright-Red) !important;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.a11y-slider-dots li button.active, .a11y-slider-dots li button:focus, .a11y-slider-dots li button:hover {
+    background: var(--Bright-Red);
 }
 
 /* Utilities classes */

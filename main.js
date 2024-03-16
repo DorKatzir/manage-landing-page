@@ -12,12 +12,14 @@ navToggle.addEventListener('click', ()=>{
 })
 
  const slider = new A11YSlider(document.querySelector('.slider'), {
+		arrows: false,
 		adaptiveHeight: false,
 		dots: true,
-        centerMode: true,
+		centerMode: true,
 		responsive: {
 			480: {
-				dots: false, // dots enabled 1280px and up
+				dots: false,
+				arrows: true,
 			},
 		},
  })
