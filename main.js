@@ -9,7 +9,11 @@ navToggle.addEventListener('click', ()=>{
         
     primaryNav.toggleAttribute('data-visible')
     primaryHeader.toggleAttribute('data-overlay')
+	document.body.classList.toggle('fixed-position')
 })
+
+
+
 
  const slider = new A11YSlider(document.querySelector('.slider'), {
 		arrows: false,

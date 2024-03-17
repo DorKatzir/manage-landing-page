@@ -752,4 +752,8 @@ input:where([type='text'], [type='email']) {
   }
 }
 
+.fixed-position {
+    position: fixed;
+ }
+
 
