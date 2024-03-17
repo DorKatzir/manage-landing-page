@@ -272,7 +272,6 @@ p[data-width="wide"]{
 }
 
 .primary-footer__wrapper {
-
   display: grid;
   gap: var(--size-700);
   grid-template-columns: 1fr;
@@ -315,7 +314,6 @@ p[data-width="wide"]{
   text-align: center;
 }
 
-
 input:where([type='text'], [type='email']) {
   border-radius: 100vw;
   border: 0;
@@ -324,10 +322,10 @@ input:where([type='text'], [type='email']) {
 
 @media (min-width: 47em) {
   .primary-footer__wrapper {
-    grid-template-columns: max-content 1fr 1fr 1fr;
+    grid-template-columns: max-content 1fr min-content;
     grid-template-areas: 
-      'logo  nav nav form'
-      'social nav nav copyright'
+      'logo  nav form'
+      'social nav copyright'
   }
   .primary-footer__social-list{
     align-items: end;
@@ -336,7 +334,7 @@ input:where([type='text'], [type='email']) {
 
   .primary-footer__form{
     justify-self: end;
-    align-items: center;
+    align-items: start;
   }
 
   .primary-footer__copyright{
@@ -347,18 +345,13 @@ input:where([type='text'], [type='email']) {
   .primary-footer__logo{
     justify-self: start;
   }
-
-  .primary-footer__nav{
-    justify-self: center;
-  }
   
 }
-
 
 /* Footer Navigation */
 .primary-footer__nav {
   columns: 2;
-  max-width: fit-content;
+  /* max-width: fit-content; */
   /* text-align: justify; */
   gap: min(15vw, 2rem);
 }
@@ -370,7 +363,7 @@ input:where([type='text'], [type='email']) {
   color: var(--Bright-Red);
 }
 
-/* Social List */
+/* Footer Social List */
 .primary-footer__social-list {
   display: flex;
   gap: var(--size-600);
@@ -385,14 +378,13 @@ input:where([type='text'], [type='email']) {
   fill: var(--Bright-Red);
 }
 @media (min-width: 47em) {
-  .social-list {
-    display: flex;
-    gap: var(--size-300);
-  }
   .social-icon{
-    width: var(--size-500);
+    width: var(--size-400);
   }
 }
+/* Footer attribution  */
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
 
 /* CTA */
 .cta {
