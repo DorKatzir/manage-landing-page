@@ -389,16 +389,22 @@ input:where([type='text'], [type='email']) {
 
 /* CTA */
 .cta {
-  position: relative;
-  isolation: isolate;
+  background-image: url('./images/bg-simplify-section-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  
   text-align: center;
 }
 @media (min-width: 47em) {
   .cta {
     text-align: left;
+    background-image: url('./images/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
   }
 }
-.cta::before {
+/* .cta::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -409,7 +415,7 @@ input:where([type='text'], [type='email']) {
   background-position: -15rem -5rem, 75rem -42rem;
   background-repeat: no-repeat;
   opacity: .1;
-}
+} */
 
 /* Numbered Items */
 
@@ -563,7 +569,7 @@ input:where([type='text'], [type='email']) {
     order: -1;
   }
 }
-.hero__image::before{
+/* .hero__image::before{
   content: '';
   position: absolute;
   z-index: -1;
@@ -576,18 +582,18 @@ input:where([type='text'], [type='email']) {
   aspect-ratio: 1 / 1.2;
   background-repeat: no-repeat;
   background-position: bottom left;
-}
-@media (min-width: 47em) {
+} */
+/* @media (min-width: 47em) {
   .hero__image::before{
     width: 45%;
   }
-}
+} */
 
 /* sales points */
-.sales-points__blog{
+/* .sales-points__blog{
   position: relative;
-}
-.sales-points__blog::before{
+} */
+/* .sales-points__blog::before{
   content: url('./images/bg-tablet-pattern.svg');
   zoom: 40%;
   position: absolute;
@@ -595,9 +601,9 @@ input:where([type='text'], [type='email']) {
   left: 70%;
   bottom: 140%;
   width: 100px;
-}
+} */
 
-@media (min-width: 47em) {
+/* @media (min-width: 47em) {
   .sales-points__blog::before{
     zoom: 90%;
     position: absolute;
@@ -606,7 +612,7 @@ input:where([type='text'], [type='email']) {
     top:50%;
     width: 100px;
   }
-}
+} */
 
 /* Utilities classes */
 .visually-hidden{
