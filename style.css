@@ -178,6 +178,7 @@ p[data-width="wide"]{
 }
 
 /* Navigation */
+
 .primary-header{
   padding-top: var(--size-700);
 }
@@ -245,7 +246,7 @@ p[data-width="wide"]{
 
   .mobile-nav-toggle {
     display: block;
-    position: fixed;
+    position: absolute;
     /* top: var(--size-600); */
     right: var(--size-400);
     cursor: pointer;
@@ -262,9 +263,9 @@ p[data-width="wide"]{
   }
   .mobile-nav-toggle[aria-expanded='true'] {
     background-image: url('./images/icon-close.svg');
+    position: fixed !important;
   }
 }
-
 
 /* Footer */
 .primary-footer{
