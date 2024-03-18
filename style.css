@@ -142,6 +142,7 @@ p[data-width="wide"]{
   max-width: 42ch;
 }
 
+
 /* Button */
 .button{
   display: inline-flex;
@@ -392,8 +393,6 @@ input:where([type='text'], [type='email']) {
   background-image: url('./images/bg-simplify-section-mobile.svg');
   background-repeat: no-repeat;
   background-position: left center;
-
-  
   text-align: center;
 }
 @media (min-width: 47em) {
@@ -404,18 +403,6 @@ input:where([type='text'], [type='email']) {
     background-position: center; 
   }
 }
-/* .cta::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background-image: 
-    url('./images/bg-tablet-pattern.svg'),
-    url('./images/bg-tablet-pattern.svg');
-  background-position: -15rem -5rem, 75rem -42rem;
-  background-repeat: no-repeat;
-  opacity: .1;
-} */
 
 /* Numbered Items */
 
@@ -564,36 +551,38 @@ input:where([type='text'], [type='email']) {
 
 /* hero */
 
+.hero.bg-blob{
+  position: relative;
+}
+.hero.bg-blob::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -15%;
+  width: 100%;
+  max-width: 814px;
+  aspect-ratio: 1;
+  background-image: url('./images/bg-tablet-pattern.svg');
+  background-repeat: space;
+  background-position: top right;
+  background-size: contain;
+  z-index: -1;
+}
+
 @media (max-width: 47em) {
   .hero__image{
     order: -1;
   }
-}
-/* .hero__image::before{
-  content: '';
-  position: absolute;
-  z-index: -1;
-  background-image: url('./images/bg-tablet-pattern.svg');
-  right: 0;
-  top: 0;
-  width: 87%;
-  max-height:70vh;
-  max-height:70dvh;
-  aspect-ratio: 1 / 1.2;
-  background-repeat: no-repeat;
-  background-position: bottom left;
-} */
-/* @media (min-width: 47em) {
-  .hero__image::before{
-    width: 45%;
+  .hero.bg-blob::before{
+    top: -12%; 
   }
-} */
+}
 
 /* sales points */
-/* .sales-points__blog{
+.sales-points__blog{
   position: relative;
-} */
-/* .sales-points__blog::before{
+}
+.sales-points__blog::before{
   content: url('./images/bg-tablet-pattern.svg');
   zoom: 40%;
   position: absolute;
@@ -601,18 +590,18 @@ input:where([type='text'], [type='email']) {
   left: 70%;
   bottom: 140%;
   width: 100px;
-} */
+}
 
-/* @media (min-width: 47em) {
+@media (min-width: 47em) {
   .sales-points__blog::before{
-    zoom: 90%;
+    zoom: 80%;
     position: absolute;
     z-index: -1;
-    left: -500px;
+    left: -600px;
     top:50%;
     width: 100px;
   }
-} */
+}
 
 /* Utilities classes */
 .visually-hidden{
