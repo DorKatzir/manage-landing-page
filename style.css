@@ -574,7 +574,9 @@ input:where([type='text'], [type='email']) {
     order: -1;
   }
   .hero.bg-blob::before{
-    top: -12%; 
+    top: -25%; 
+    left: 10%;
+    width: 150%;
   }
 }
 
