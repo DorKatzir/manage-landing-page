@@ -55,7 +55,7 @@ Users should be able to:
 ### Useful resources
 
 - [A11Y Slider](https://a11yslider.js.org/) - Library for simple and accessible sliders..
-- [Analysing the layout](https://www.youtube.com/watch?v=h3bTwCqX4ns&t=69s) - Looking at potential problems we can run into and how I would tackle them.
+- [Analysing the layout](https://www.youtube.com/watch?v=h3bTwCqX4ns&t=69s) - Looking at potential problems we can run into.
 
 ## Author
 
