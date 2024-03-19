@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution CODE: [Add solution URL here](https://github.com/DorKatzir/manage-landing-page)
-- Live Site URL: [Add live site URL here](https://dorkatzir.github.io/manage-landing-page/)
+- [Solution CODE](https://github.com/DorKatzir/manage-landing-page)
+- [Live Site URL](https://dorkatzir.github.io/manage-landing-page)
 
 ## My process
 
@@ -48,23 +48,22 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- 
-
+- Vite js
+- Github Pages
+- VSCODE editor
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
+- [A11Y Slider](https://a11yslider.js.org/) - Library for simple and accessible sliders..
+- [Analysing the layout](https://www.youtube.com/watch?v=h3bTwCqX4ns&t=69s) - Looking at potential problems we can run into and how I would tackle them.
 
 ## Author
 
 - Dror Katzir
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@DrorKatzir](https://www.frontendmentor.io/profile/DorKatzir)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Thanks to [Kevin Powell](https://www.youtube.com/@KevinPowell)
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
