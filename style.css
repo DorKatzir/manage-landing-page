@@ -213,7 +213,7 @@ p[data-width="wide"]{
     position: relative;
     z-index: 999;
   }
-  .primary-navigation{
+  .primary-shit{
     display: none;
 
     position: fixed;
@@ -241,7 +241,7 @@ p[data-width="wide"]{
     font-weight: var(--fw-bold);
   }
 
-  .primary-navigation[data-visible]{
+  .primary-shit[data-visible]{
     display: block;
   }
 
