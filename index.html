@@ -12,7 +12,8 @@
     <!-- a11y-slider -->
     <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type='text/css'>
+    <link rel='stylesheet' href='form-style.css' type='text/css' /> 
     <title>Manage</title>
   </head>
   <body>
@@ -271,10 +272,10 @@
 
         
             <form class="primary-footer__form" action="">
-              <input type="email" placeholder="Updates in your inbox…">
-              <button class="button" data-shadow="none">Go</button>
+              <input type="email" placeholder="Updates in your inbox…" required>
+              <button type="submit" class="button" data-shadow="none">Go</button>
             </form>
-
+ 
             <div class="attribution primary-footer__copyright">
               Challenge by <a href="https://www.frontendmentor.io/profile/DorKatzir" target="_blank" rel="noopener">Frontend Mentor</a>. &nbsp; 
               Coded by <a href="https://github.com/DorKatzir/manage-landing-page" target="_blank" rel="noopener">Dror Katzir</a>.
@@ -287,5 +288,6 @@
 
     <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
     <script type="module" src="/main.js"></script>
+   
   </body>
 </html>
